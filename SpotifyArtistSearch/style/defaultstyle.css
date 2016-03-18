@@ -1,0 +1,28 @@
+.search{
+
+    margin: 150px auto 50px;
+    width: 200px;
+}
+
+.getartist{
+
+        margin:10px auto;
+
+}
+
+.artist-box{
+
+        width: 80%;
+        margin: 0 auto;
+}
+
+.artists_list{
+
+        padding: 30px 0;
+}
+
+
+img{
+        width: 33%;
+        margin: 10px 50px 30px 0px;
+}

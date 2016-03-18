@@ -1,0 +1,119 @@
+<h1>Pokédex</h1>
+
+<!-- List of pokemon -->
+<ul class="pokedex-list">
+  <% @pokemon.each do |pkmn| %>
+    <li>
+      <button class="js-show-pokemon btn btn-link" data-pokemon-uri="<%= pkmn["resource_uri"] %>">
+        <%= pkmn["name"] %>
+      </button>
+    </li>
+  <% end %>
+</ul>
+
+
+<!-- Pokemon modal view (hidden at first) -->
+<div class="modal fade js-pokemon-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+           <h3 class="modal-title">
+            <span class="js-pkmn-name">
+             <!--  Pokemon name -->
+            </span>
+            <small class="js-pkmn-number">
+              <!-- Pokemon number -->
+            </small>
+          </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+          <dl class="dl-horizontal">
+            <dt>Image</dt>
+           
+              <div class"image">
+              <img src="" class="js-pkmn-image" alt="Pokemon Image"  width= 30% >
+              </div>
+
+            <dt>Height</dt>
+            <dd class="js-pkmn-height"><!-- height --></dd>
+
+            <dt>Weight</dt>
+            <dd class="js-pkmn-weight"><!-- weight --></dd>
+
+            <dt>HP</dt>
+            <dd class="js-pkmn-hp"><!-- hp --></dd>
+
+            <dt>Attack</dt>
+            <dd class="js-pkmn-attack"><!-- attack --></dd>
+
+            <dt>Defense</dt>
+            <dd class="js-pkmn-defense"><!-- defense --></dd>
+
+            <dt>Special Attack</dt>
+            <dd class="js-pkmn-sp_atk"><!-- sp_atk --></dd>
+
+            <dt>Special Defense</dt>
+            <dd class="js-pkmn-sp_def"><!-- sp_def --></dd>
+
+            <dt>Speed</dt>
+            <dd class="js-pkmn-speed"><!-- speed --></dd>
+            
+            <p>----------</p>
+
+            <dt>Type</dt>
+            <dd class="js-pkmn-type"><!-- type --></dd>
+
+            
+
+
+          </dl>
+      </div><!-- .modal-body -->
+
+      <button type="button" class="js-show-pokemon-evol btn btn-default" data-pokemon-uri="" >
+        SHOW EVOLUTIONS
+      </button>
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+
+<div class="modal fade js-pokemon-evolution-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Evolutions</h4>
+        <h3 class="modal-title">
+            <span class="js-pkmn-evol-name">
+             <!--  Pokemon name -->
+            </span>
+            <small class="js-pkmn-evol-number">
+              <!-- Pokemon number -->
+            </small>
+          </h3>
+      </div>
+
+      <div class="modal-body">
+        
+        <div class"image">
+              <img src="" class="js-pkmn-evol-image" alt="Pokemon Image"  width= 30% >
+              </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
